@@ -19,7 +19,7 @@ RUN go get -u github.com/golang/dep/cmd/dep
 
 # Get API
 RUN git clone https://github.com/kings-cam/ticketing-ui.git /root/go/src/tickets && cd /root/go/src/tickets
-RUN /root/go/bin/dep ensure && go build cmd/api.go
+RUN /root/go/bin/dep init && /root/go/bin/dep ensure && go build cmd/api.go
 RUN ./api &
 
 # Get UI
