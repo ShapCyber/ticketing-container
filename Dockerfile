@@ -3,7 +3,7 @@ FROM fedora:26
 MAINTAINER Krishna Kumar <kks32@cam.ac.uk>
 
 # Libraries
-RUN dnf update -y && dnf install -y git curl npm nodejs wget golang mongodb mongodb-server
+RUN dnf update -y && dnf install -y bzip2 git curl npm nodejs wget golang mongodb mongodb-server
 RUN  npm install -g yarn && yarn global add n && n stable
 
 WORKDIR /root/
